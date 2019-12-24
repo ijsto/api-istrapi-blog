@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "posts",
+  "info": {
+    "name": "post",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "maxLength": 120,
+      "required": true,
+      "minLength": 5,
+      "type": "string"
+    },
+    "body": {
+      "maxLength": 7500,
+      "required": true,
+      "minLength": 30,
+      "type": "richtext"
+    },
+    "featuredImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "published": {
+      "type": "boolean"
+    }
+  }
+}
